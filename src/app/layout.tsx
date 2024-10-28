@@ -1,5 +1,6 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import { Inter } from 'next/font/google'; // Usiamo Inter come fallback
 import "./globals.css";
 
 const inter = Inter({ 
@@ -7,7 +8,11 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+// src/app/layout.tsx
+// ...modifica l'export del metadata:
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://the-duckes-chrono-eb.vercel.app'), // aggiorna con il tuo URL
   title: "The Dukes Chrono | Orologi di Prestigio",
   description: "Collezione esclusiva di orologi vintage di prestigio",
   keywords: ["orologi", "vintage", "lusso", "Rolex", "Omega", "Longines"],
@@ -23,6 +28,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+// Aggiungi l'export del viewport
+export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -36,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${inter.variable} antialiased bg-black text-white`}>
+      <body
+        className={`${inter.variable} antialiased bg-black text-white`}
+      >
         {children}
       </body>
     </html>
