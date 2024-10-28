@@ -3,7 +3,7 @@ import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[1fr_auto] min-h-screen font-[family-name:var(--font-inter)]">
       {/* Main Content */}
       <main className="flex flex-col">
         <Hero />
