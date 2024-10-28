@@ -1,36 +1,22 @@
 // src/app/page.tsx
-import Hero from "@/components/sections/hero";
+import Hero from '@/components/sections/hero'
+import WatchGallery from '@/components/sections/featured-watches'
+import InstagramFeed from '@/components/sections/instagram-feed'
+import ContactCTA from '@/components/sections/contact-cta'
+import Footer from '@/components/ui/footer'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[1fr_auto] min-h-screen font-[family-name:var(--font-inter)]">
-      {/* Main Content */}
-      <main className="flex flex-col">
+    <main className="bg-black min-h-screen">
+      <div className="relative z-10">
         <Hero />
-        {/* Altri componenti possono essere aggiunti qui */}
-      </main>
-
-      {/* Footer */}
-      <footer className="flex gap-6 flex-wrap items-center justify-center p-6 bg-black/50 backdrop-blur-sm z-10">
-        <a
-          className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-          href="#catalogo"
-        >
-          Catalogo
-        </a>
-        <a
-          className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-          href="#contatti"
-        >
-          Contatti
-        </a>
-        <a
-          className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-          href="#about"
-        >
-          Chi Siamo →
-        </a>
-      </footer>
-    </div>
-  );
+        <div className="container mx-auto px-4 space-y-20">
+          <WatchGallery />
+          <InstagramFeed />
+          <ContactCTA />
+          <Footer />
+        </div>
+      </div>
+    </main>
+  )
 }

@@ -16,7 +16,7 @@ export default function ParallaxSection({ children, offset = 50 }: ParallaxProps
   })
   
   const y = useTransform(scrollYProgress, [0, 1], [0, offset])
-  
+
   return (
     <motion.div ref={ref} style={{ y }}>
       {children}

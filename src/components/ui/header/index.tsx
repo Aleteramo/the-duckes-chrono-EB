@@ -26,12 +26,15 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
+          {/* Logo */}
           <Link 
             href="/" 
             className="font-serif text-xl text-white hover:opacity-80 transition-opacity"
           >
             TDC
           </Link>
+
+          {/* Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/catalogo" 
@@ -58,6 +61,8 @@ export default function Header() {
               Contatti
             </Link>
           </div>
+
+          {/* Mobile menu button */}
           <button 
             className="md:hidden text-white hover:opacity-80 transition-opacity"
             aria-label="Menu"
